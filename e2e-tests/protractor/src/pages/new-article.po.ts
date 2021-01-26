@@ -40,17 +40,17 @@ export const newArticlePage = {
       await axios({
         method: 'post',
         url: 'https://conduit.productionready.io/api/articles',
-        headers: { 
-          'Content-Type': 'application/json', 
+        headers: {
+          'Content-Type': 'application/json',
           'X-Requested-With': 'XMLHttpRequest',
-          'Authorization': `Token ${token}`
+          Authorization: `Token ${token}`,
         },
-        data: JSON.stringify({"article":{"title":article.title,"description":article.summary,"body":article.body,"tagList":article.tags}})
+        data: JSON.stringify({
+          article: { title: article.title, description: article.summary, body: article.body, tagList: article.tags },
+        }),
       });
     } catch (e) {
-      console.error(
-        `Could not publish an article`
-      );
+      console.error(`Could not publish an article`);
       throw e;
     }
   },
@@ -58,5 +58,5 @@ export const newArticlePage = {
   async openArticle(userId: string, title: string) {
     await headerNavBar.clickMyProfile(userId);
     await myProfilePage.clickOnArticle(title);
-  }
+  },
 };

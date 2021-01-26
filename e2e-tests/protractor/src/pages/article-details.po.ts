@@ -22,7 +22,7 @@ export const articleDetailsPage = {
     await browser.wait(
       ExpectedConditions.textToBePresentInElement(title, titleText),
       TIME_OUT_MS,
-      `${titleText} is not present in the Article's Title.`
+      `${titleText} is not present in the Article's Title.`,
     );
   },
 
@@ -43,12 +43,9 @@ export const articleDetailsPage = {
   async isCommentPosted(comment: string) {
     try {
       await browser.wait(
-        ExpectedConditions.textToBePresentInElement(
-          postedCommentSection,
-          comment
-        ),
+        ExpectedConditions.textToBePresentInElement(postedCommentSection, comment),
         TIME_OUT_MS,
-        `${comment} is not present in comment section area.`
+        `${comment} is not present in comment section area.`,
       );
       return true;
     } catch {

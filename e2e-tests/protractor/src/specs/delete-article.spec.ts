@@ -34,7 +34,7 @@ describe('Delete article', () => {
 
     expect(await myProfilePage.isArticlePresent(articleDetails.title)).toBe(
       false,
-      'Article is still present on My Articles feed.'
+      'Article is still present on My Articles feed.',
     );
   });
 
@@ -54,7 +54,7 @@ describe('Delete article', () => {
 
     expect(await globalFeedPage.isArticlePresent(articleDetails.title)).toBe(
       false,
-      'Article is still present on Global feed.'
+      'Article is still present on Global feed.',
     );
   });
 });

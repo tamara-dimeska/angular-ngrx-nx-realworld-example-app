@@ -28,7 +28,7 @@ describe('Favorite articles', () => {
 
     expect(await myProfilePage.isArticlePresent(articleDetails.title)).toBe(
       true,
-      'Article is not correctly displayed on Favorited Articles feed.'
+      'Article is not correctly displayed on Favorited Articles feed.',
     );
   });
 });

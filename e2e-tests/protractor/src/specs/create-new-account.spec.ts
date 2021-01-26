@@ -17,10 +17,7 @@ describe('Create new account', () => {
       userId = generateRandomString();
 
       await registerPage.createNewAccount(userId);
-      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(
-        true,
-        'A new user is not created.'
-      );
+      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(true, 'A new user is not created.');
     });
 
     it('should display error message, after entering incorrect information', async () => {

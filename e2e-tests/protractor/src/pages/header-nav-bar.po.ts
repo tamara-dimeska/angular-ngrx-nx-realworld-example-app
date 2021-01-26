@@ -22,7 +22,7 @@ export const headerNavBar = {
     await browser.wait(
       ExpectedConditions.presenceOf(userIdButton),
       TIME_OUT_MS,
-      'The User ID is not displayed on the screen.'
+      'The User ID is not displayed on the screen.',
     );
   },
 

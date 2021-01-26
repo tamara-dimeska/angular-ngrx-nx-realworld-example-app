@@ -37,16 +37,14 @@ export const registerPage = {
       await axios({
         method: 'post',
         url: 'https://conduit.productionready.io/api/users',
-        headers: { 
-          'Content-Type': 'application/json', 
-          'X-Requested-With': 'XMLHttpRequest'
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
         },
-        data: JSON.stringify({"user":{"email":`${userId}@example.com`,"password":userId,"username":userId}})
+        data: JSON.stringify({ user: { email: `${userId}@example.com`, password: userId, username: userId } }),
       });
     } catch (e) {
-      console.error(
-        `Could not register user`
-      );
+      console.error(`Could not register user`);
       throw e;
     }
   },

@@ -28,7 +28,7 @@ describe('New article', () => {
 
     expect(await articleDetailsPage.isTitlePresent('Automation Testing')).toBe(
       true,
-      'Article is not correctly published.'
+      'Article is not correctly published.',
     );
   });
 
@@ -38,14 +38,12 @@ describe('New article', () => {
       summary: 'How to do automation testing',
       body: 'Automation testing description',
     });
-    await articleDetailsPage.waitForArticleToBePublished(
-      'Automation Testing 2'
-    );
+    await articleDetailsPage.waitForArticleToBePublished('Automation Testing 2');
     await headerNavBar.clickMyProfile(userId);
 
     expect(await myProfilePage.isArticlePresent('Automation Testing 2')).toBe(
       true,
-      'Article is not correctly displayed on My Articles feed.'
+      'Article is not correctly displayed on My Articles feed.',
     );
   });
 
@@ -55,15 +53,13 @@ describe('New article', () => {
       summary: 'How to do automation testing',
       body: 'Automation testing description',
     });
-    await articleDetailsPage.waitForArticleToBePublished(
-      'Automation Testing 3'
-    );
+    await articleDetailsPage.waitForArticleToBePublished('Automation Testing 3');
     await app.navigateToApp();
     await homePage.openGlobalFeed();
 
     expect(await globalFeedPage.isArticlePresent('Automation Testing 3')).toBe(
       true,
-      'Article is not correctly displayed on Global feed.'
+      'Article is not correctly displayed on Global feed.',
     );
   });
 });
