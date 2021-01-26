@@ -16,18 +16,13 @@ describe('Authentication', () => {
     it('should bring the user to Home page, after entering correct information', async () => {
       await signInPage.signIn({ username: userId, password: userId });
 
-      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(
-        true,
-        'The user is not logged in.'
-      );
+      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(true, 'The user is not logged in.');
     });
 
     it('should display error message, after entering incorrect information', async () => {
       await signInPage.signIn({ username: userId, password: '111111111' });
 
-      expect(await signInPage.getErrorMessage()).toEqual(
-        'email or password is invalid'
-      );
+      expect(await signInPage.getErrorMessage()).toEqual('email or password is invalid');
     });
   });
 
@@ -37,10 +32,7 @@ describe('Authentication', () => {
       await headerNavBar.waitForLoginInfo(userId); // need to explicitly wait here, so that we are sure that the user is logged in
       await settingsPage.logout();
 
-      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(
-        false,
-        'The user is still logged in.'
-      );
+      expect(await headerNavBar.isUserLoggedIn(userId)).toBe(false, 'The user is still logged in.');
     });
   });
 });

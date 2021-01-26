@@ -32,7 +32,7 @@ exports.config = {
         spec: {
           displayStacktrace: 'raw',
         },
-      })
+      }),
     );
 
     beforeEach(async () => {

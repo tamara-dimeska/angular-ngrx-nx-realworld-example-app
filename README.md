@@ -1,4 +1,4 @@
-A forked repo from [Real World App](https://github.com/gothinkster/realworld) 
+A forked repo from [Real World App](https://github.com/gothinkster/realworld)
 For more information, go to their main repo. :)
 
 Using the Conduit app to create some e2e tests in different frameworks. You can find them in the e2e-tests folder.

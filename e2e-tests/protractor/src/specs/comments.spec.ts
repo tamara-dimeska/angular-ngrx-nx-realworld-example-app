@@ -18,7 +18,7 @@ describe('Add comment', () => {
     await registerPage.registerAccountAPI(userId);
     await signInPage.signIn({ username: userId, password: userId });
     await newArticlePage.publishArticleAPI(userId, articleDetails);
-    await newArticlePage.openArticle(userId, articleDetails.title)
+    await newArticlePage.openArticle(userId, articleDetails.title);
   });
 
   it('should display the comment in the article', async () => {
@@ -26,9 +26,6 @@ describe('Add comment', () => {
 
     await articleDetailsPage.postComment(comment);
 
-    expect(await articleDetailsPage.isCommentPosted(comment)).toBe(
-      true,
-      'The comment is not posted.'
-    );
+    expect(await articleDetailsPage.isCommentPosted(comment)).toBe(true, 'The comment is not posted.');
   });
 });

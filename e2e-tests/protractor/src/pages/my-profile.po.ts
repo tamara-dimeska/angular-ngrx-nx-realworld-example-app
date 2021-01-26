@@ -11,7 +11,7 @@ export const myProfilePage = {
       await browser.wait(
         ExpectedConditions.textToBePresentInElement(title, titleText),
         TIME_OUT_MS,
-        `${titleText} is not present in the Article's Title.`
+        `${titleText} is not present in the Article's Title.`,
       );
       return true;
     } catch {
@@ -30,5 +30,5 @@ export const myProfilePage = {
   async clickOnArticle(articleTitle: string) {
     const article = element(by.cssContainingText("[data-e2e-id='article-title']", articleTitle));
     await article.click();
-  }
+  },
 };

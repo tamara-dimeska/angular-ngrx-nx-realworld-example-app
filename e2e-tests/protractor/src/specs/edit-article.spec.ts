@@ -28,8 +28,9 @@ describe('Edit articles', () => {
       title: 'Automation Testing EDITED',
     });
 
-    expect(
-      await articleDetailsPage.isTitlePresent('Automation Testing EDITED')
-    ).toBe(true, 'Article is not correctly published, after editing.');
+    expect(await articleDetailsPage.isTitlePresent('Automation Testing EDITED')).toBe(
+      true,
+      'Article is not correctly published, after editing.',
+    );
   });
 });
