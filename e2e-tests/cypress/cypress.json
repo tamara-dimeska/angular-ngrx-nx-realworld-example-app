@@ -1,5 +1,5 @@
 {
-    "defaultCommandTimeout": 5000,
+  "defaultCommandTimeout": 5000,
   "pageLoadTimeout": 10000,
   "waitForAnimations": true,
   "viewPortWidth": 1200,

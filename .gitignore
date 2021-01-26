@@ -40,3 +40,4 @@ Thumbs.db
 
 # e2e-tests
 /e2e-tests/protractor/node_modules
+/e2e-tests/cypress/node_modules
