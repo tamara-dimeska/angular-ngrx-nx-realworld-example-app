@@ -1,4 +1,5 @@
 {
+  "baseUrl": "http://localhost:4200/",
   "defaultCommandTimeout": 5000,
   "pageLoadTimeout": 10000,
   "waitForAnimations": true,
@@ -7,5 +8,6 @@
   "animationDistanceTreshold": 20,
   "execTimeout": 60000,
   "requestTimeout": 15000,
-  "responseTimeout": 15000
+  "responseTimeout": 15000,
+  "testFiles": "**/*.feature"
 }
