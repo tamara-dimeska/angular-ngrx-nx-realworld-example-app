@@ -12,7 +12,7 @@ Feature: Register
         And I input correct email
         And I input correct password
         And I click Sign up button
-        Then my information is displayed in the header
+        Then my information is displayed in the header on the Home page
 
     Scenario: Invalid registration
         When I input username that already exists

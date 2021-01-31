@@ -1,7 +1,7 @@
 {
   "baseUrl": "http://localhost:4200/",
-  "defaultCommandTimeout": 5000,
-  "pageLoadTimeout": 10000,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 20000,
   "waitForAnimations": true,
   "viewPortWidth": 1200,
   "viewPortHeight": 720,
@@ -9,5 +9,6 @@
   "execTimeout": 60000,
   "requestTimeout": 15000,
   "responseTimeout": 15000,
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "*.js"
 }

@@ -5,6 +5,7 @@ Feature: Logout
     so that no one else can use my account.
 
     Scenario: Successful logout
-        Given I open the Settings page
+        Given I am logged in to the system
+        And I open the Settings page
         When I press on Logout button
         Then my credentials are not displayed in the header anymore

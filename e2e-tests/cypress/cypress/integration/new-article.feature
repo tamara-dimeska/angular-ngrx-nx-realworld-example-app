@@ -5,7 +5,8 @@ Feature: New article
     so that I can share it with the other users.
 
     Background:
-        Given I am on New Post page
+        Given I am logged in to the system 
+        And I am on New Post page
         When I input the title of the article
         And I input the summary of the article
         And I input the body of the article

@@ -1,13 +1,10 @@
 import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps';
 import { generateRandomString } from '../../utils/generate-random-string';
 
-let userId;
-
-beforeEach(() => {
-  userId = generateRandomString();
-});
+let userId = '';
 
 Given('I open Register page', () => {
+  userId = generateRandomString();
   cy.visit('#/register');
 });
 
@@ -27,14 +24,12 @@ And('I click Sign up button', () => {
   cy.get("[data-e2e-id='sign-up']").click();
 });
 
-Then('my information is displayed in the header', () => {
-  cy.get('a').should('contain', userId);
+Then('my information is displayed in the header on the Home page', () => {
+  cy.get(userId).should('be.visible');
 });
 
 When('I input username that already exists', () => {
-  cy.request('POST', 'https://conduit.productionready.io/api/users', {
-    user: { email: `${userId}@example.com`, password: userId, username: userId },
-  });
+  cy.registerUserApi(userId);
   cy.get("[placeholder='Username']").type(userId);
 });
 

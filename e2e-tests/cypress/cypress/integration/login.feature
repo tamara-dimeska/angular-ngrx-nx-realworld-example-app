@@ -5,17 +5,16 @@ Feature: Login
     so that I can use the application to publish articles. 
 
     Background: 
-        Given I open the Login page
-
-    Scenario: Valid login
+        Given I am registered user
+        And I open the Login page
         When I input a correct username
+
+    Scenario: Valid login    
         And I input a correct password
         And I click Login button
-        Then I am navigated to the home page
-        And my information is displayed in the header
+        Then my information is displayed in the header
 
     Scenario: Invalid login
-        When I input a correct username
         And I input incorrect password
         And I click Login button
         Then I see an error message on the login page
